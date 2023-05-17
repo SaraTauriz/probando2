@@ -1,11 +1,2 @@
-# Nodejs
+./node_modules
 node_modules
-
-# npm
-package-lock.json
-
-# environment variables
-#.env
-
-## dist
-dist

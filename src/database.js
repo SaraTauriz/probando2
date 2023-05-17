@@ -1,18 +1,6 @@
-import mongoose from "mongoose";
-import { MONGODB_URI } from "./config.js";
+const mongoose = require("mongoose");
 
-try {
-  const db = await mongoose.connect(MONGODB_URI);
-  console.log("Connected to ", db.connection.name);
-} catch (error) {
-  console.error(error);
-}
-
-mongoose.connection.on("connected", () => {
-  console.log("Mongoose is connected");
-});
-
-mongoose.connection.on("disconnected", () => {
-  console.log("Mongoose is disconnected");
-});
-
+mongoose
+	.connect("mongodb+srv://sarataurizs:123xd@cluster0.yz3wqzm.mongodb.net/")
+	.then((db) => console.log("Base de datos conectada "))
+	.catch((err) => console.log(err));
